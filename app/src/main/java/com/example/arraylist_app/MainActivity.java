@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                grocery.add(t1.getText().toString());
+
+               Toast.makeText(MainActivity.this, t1.getText().toString()+ " is Added", Toast.LENGTH_SHORT).show();
             }
         });
     }
