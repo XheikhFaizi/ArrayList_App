@@ -15,7 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView ls =findViewById(R.id.myListview);
+        ListView lsView =findViewById(R.id.myListview);
+
          ArrayList<String> grocery = new ArrayList<>();
          grocery.add("Oil");
          grocery.add("Apple");
@@ -24,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
          grocery.add("Tea");
 
         ArrayAdapter<String> adp =new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, grocery);
-
-
+        lsView.setAdapter(adp);
     }
 }
