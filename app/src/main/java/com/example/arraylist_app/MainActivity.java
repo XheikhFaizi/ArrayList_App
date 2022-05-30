@@ -2,6 +2,7 @@ package com.example.arraylist_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -40,10 +41,10 @@ public class MainActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               grocery.add(t1.getText().toString());
-
-               Toast.makeText(MainActivity.this, t1.getText().toString()+ " is Added", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this , MainActivity2.class);
+                startActivity(intent);
             }
         });
+
     }
 }
